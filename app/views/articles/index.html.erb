@@ -1,0 +1,21 @@
+<h1> İndex-Articles Listing Page </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tittle</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @article.each do |article| %>
+      <tr>
+        <td><%= article.tittle %></td>
+        <td><%= article.description %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
