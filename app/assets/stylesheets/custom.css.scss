@@ -1,0 +1,69 @@
+@import "bootstrap";
+
+.navbar{
+  background-color: #393939 !important ;
+}
+
+.bg-dark{
+  background-color: #393939 !important;
+}
+.navbar-brand{
+  font-size:  2.5rem ;
+}
+
+h1{
+  color : red;
+}
+
+.nav-link{
+  color: antiquewhite !important;
+  font-size: 1.2em;
+  float: left;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 10px;
+  
+}
+
+.nav-link:hover{
+  color: red !important;
+}
+
+#home-container{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#logo{
+  float: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color:antiquewhite !important;
+}
+
+.jumbotron{
+  background-image: asset-url('banner.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+ 
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+ 
