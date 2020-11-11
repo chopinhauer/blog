@@ -60,7 +60,7 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: lightgrey;
+  background-color: #EBEBEB;
 }
 
 #sticky-footer {
@@ -68,3 +68,45 @@ body {
 }
  
 
+.apple_pagination { 
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  background:transparent; 
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span { 
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #9C9C9C; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #EBEBEB;
+    background-color: #393939;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.4;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;}
+  .apple_pagination a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #393939; 
+     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif ;
+     outline: none; 
+     padding: 5px 0;
+     width: 30px;
+     text-align: center;  }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-shadow: #EBEBEB 1px 1px 1px; 
+      -moz-border-radius: 1em;
+      -webkit-border-radius: 1em; 
+      line-height: 1.4em; 
+      border-radius: 1em;
+      text-decoration: underline; 
+    }
+
+    
+    

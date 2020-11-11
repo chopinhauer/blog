@@ -1,7 +1,22 @@
- 
-<h1 class="text-center mt-4"> <%=@user.username %>'s Profile </h1>
-
-
- <h1 class="text-center mt-4">  Articles </h1>
-
- <%= render 'articles/article'  %>
+  <div class="row">
+    <div class="col-sm-9">
+      <h1 class="text-center mt-4">  Articles </h1>
+      <%= render 'articles/article'  %>
+    </div>
+    
+    <div class="col-sm-3">
+      <h1 class=" text-center mt-4"><%=@user.username %>'s Profile</h1>
+        <div class="text-center mt-4">
+          <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="..." alt="[User Photo]">
+              <div class="card-body">
+                <h5 class="card-title "><%=@user.username%></h5>
+                <h5 class="card-title"><%=@user.email%></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <%=link_to "Edit your profile" , edit_user_path(@user) , class: "btn btn-outline-dark" %>
+              </div>
+          </div> 
+            
+        </div>
+    </div>
+  </div>
