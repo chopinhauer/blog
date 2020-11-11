@@ -1,5 +1,33 @@
-<h1> İndex-Articles Listing Page </h1>
+<div id="page-content">
 
+  <h1 class="text-center mt-4"> Listing all articles </h1>
+
+  <div class="container  ">
+    <% @article.each do |article| %>
+      <div class="row justify-content-md-center ">
+        <div class="col-8  mt-4">
+          <div class="card text-center shadow mb-4 bg-white rounded">
+            <div class="card-header font-italic">
+              by Faruk Gürlesin
+            </div>
+            <div class="card-body">
+              <h5 class="card-title  "><%= link_to article.tittle , article_path(article) , class:"font-weight-bold text-dark text-capitalize" %></h5>
+              <p class="card-text"><%= truncate(article.description,length:50 ) %></p> 
+               <%= link_to 'Delete' , article_path(article.id) ,  method: :delete , data: {confirm:"Are you sure ?"} , class:"btn-sm btn-dark" %> 
+               <%= link_to 'Edit' , edit_article_path(article) , class:"btn-sm btn-dark" %>  
+               <%= link_to 'View' , article_path(article) , class:"btn-sm btn-dark"  %>
+                 
+               
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%=time_ago_in_words(article.created_at)%> ago  , Edited <%=time_ago_in_words(article.created_at)%> ago </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 <table>
   <thead>
     <tr>
@@ -12,7 +40,7 @@
   <tbody>
     <% @article.each do |article| %>
       <tr>
-        <td><%= article.tittle %></td>
+        <td><%= article.tittle  %></td>
         <td><%= article.description %></td>
         <td><%= link_to 'Delete' , article_path(article.id) , method: :delete , data: {confirm:"Are you sure ?"} %></td>
         <td><%= link_to 'Edit' , edit_article_path(article) %> </td>
