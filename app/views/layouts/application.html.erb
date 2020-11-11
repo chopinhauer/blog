@@ -13,8 +13,10 @@
             
             
     <%=render 'layouts/navigation'%>
-    <%= yield %>
-
+    <div id="page-content"> 
+    <%= yield %> 
     <%=render 'layouts/messages'%>
+    </div>
+    <%=render 'layouts/footer'%>
   </body>
 </html>
