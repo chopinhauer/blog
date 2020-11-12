@@ -33,7 +33,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <div class="dropdown-header">
-                        User : <%=current_user.username.capitalize%>
+                        <% "(Admin)" if current_user.admin? %> User:  <%=current_user.username.capitalize%>
                       </div>
                     <div class="dropdown-divider"></div>
                       <%= link_to "View your profile" , user_path(current_user) , class:"dropdown-item"%>

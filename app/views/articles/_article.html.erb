@@ -13,7 +13,7 @@
               <h5 class="card-title  "><%= link_to article.tittle , article_path(article) , class:"font-weight-bold text-dark text-capitalize" %></h5>
               <p class="card-text"><%= truncate(article.description,length:50 ) %></p> 
                 <%= link_to 'View' , article_path(article) , class:"btn-sm btn-dark"  %>
-                <%if logged_in? && article.user==current_user%>
+                <%if logged_in? && (article.user==current_user || current_user.admin? ) %>
                   <%= link_to 'Edit' , edit_article_path(article) , class:"btn-sm btn-dark" %>  
                   <%= link_to 'Delete' , article_path(article.id) ,  method: :delete , data: {confirm:"Are you sure ?"} , class:"btn-sm btn-dark" %> 
                 <%end%>  

@@ -16,7 +16,7 @@
                 <p class="card-text">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
-                <% if logged_in? && @user==current_user%>
+                <% if logged_in? && (@user==current_user || @user.admin? ) %>
                   <%=link_to "Edit your profile" , edit_user_path(@user) , class: "btn btn-outline-dark" %>
                 <%end%>     
               </div>

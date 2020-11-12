@@ -11,11 +11,17 @@
                 <%= link_to user.username , user %>
             </div>
             <div class="card-body">
-              <p class="card-text"> has <%= pluralize( user.articles.count , " articles" ,) %></p>  
-                <% if logged_in? && current_user==user %>  
-                  <%= link_to 'Edit Your Profile' , edit_user_path(user)  , class:"btn-sm btn-dark" %>   
+              <p class="card-text"> has <%= pluralize( user.articles.count , " articles" ,) %>
+              </p> <%= link_to 'View Profile' , user , class:"btn-sm btn-dark"  %> 
+                <% if logged_in? %> 
+                  <% if user==current_user %>  
+                    <%= link_to 'Edit Your Profile' , edit_user_path(user)  , class:"btn-sm btn-dark" %>   
+                  <%elsif current_user.admin? %>
+                    <%= link_to "Edit This User" , edit_user_path(user)  , class:"btn-sm btn-dark" %>
+                    <%=link_to "Delete This User" , user_path(user) , class: "btn-sm btn-danger" , method: :delete , data: {confirm: "This account will be delete ! Are you sure? " } %>
+                  <%end%>
                 <%end%>
-                  <%= link_to 'View Profile' , user , class:"btn-sm btn-dark"  %>
+                  
             </div>
             <div class="card-footer text-muted">
               <small>Joined <%=time_ago_in_words(user.created_at)%> ago   </small>
