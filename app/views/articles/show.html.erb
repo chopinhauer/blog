@@ -10,8 +10,10 @@
             <div class="card-body"> 
               <p class="card-text text-left"><%=  @article.description  %></p> 
               <div class="mt-4">
-               <%= link_to 'Delete' , article_path(@article) ,  method: :delete , data: {confirm:"Are you sure ?"} , class:"btn-sm btn-dark" %> 
-               <%= link_to 'Edit' , edit_article_path(@article) , class:"btn-sm btn-dark" %>   
+                <% if logged_in? && @article.user==current_user %>
+                  <%= link_to 'Delete' , article_path(@article) ,  method: :delete , data: {confirm:"Are you sure ?"} , class:"btn-sm btn-dark" %> 
+                  <%= link_to 'Edit' , edit_article_path(@article) , class:"btn-sm btn-dark" %>   
+                <% end %>
               </div>
             </div>
             <div class="card-footer text-muted">

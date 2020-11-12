@@ -12,8 +12,10 @@
             </div>
             <div class="card-body">
               <p class="card-text"> has <%= pluralize( user.articles.count , " articles" ,) %></p>  
-               <%= link_to 'Edit Profile' , edit_user_path(user)  , class:"btn-sm btn-dark" %>  
-               <%= link_to 'View Profile' , user , class:"btn-sm btn-dark"  %> 
+                <% if logged_in? && current_user==user %>  
+                  <%= link_to 'Edit Your Profile' , edit_user_path(user)  , class:"btn-sm btn-dark" %>   
+                <%end%>
+                  <%= link_to 'View Profile' , user , class:"btn-sm btn-dark"  %>
             </div>
             <div class="card-footer text-muted">
               <small>Joined <%=time_ago_in_words(user.created_at)%> ago   </small>
