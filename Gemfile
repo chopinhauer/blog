@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 
 
 gem 'bootstrap', '~> 4.4.1'
-gem 'bootstrap-sass'
 gem 'jquery-rails' 
 
 

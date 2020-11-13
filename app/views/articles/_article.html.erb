@@ -19,6 +19,12 @@
                 <%end%>  
             </div>
             <div class="card-footer text-muted">
+                <div class="my-2"> 
+                  <% if article.categories.any?%> 
+                    Tags : 
+                       <%= render article.categories %> 
+                  <%end%> 
+                 </div> 
               <small>Created <%=time_ago_in_words(article.created_at)%> ago  , Edited <%=time_ago_in_words(article.updated_at)%> ago </small>
             </div>
           </div>

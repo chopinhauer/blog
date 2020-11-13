@@ -25,12 +25,12 @@ h1{
 }
 
 .nav-link:hover{
-  color: red !important;
+  color: #EBEBEB !important;
 }
 
 #home-container{
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 25px; 
 }
 
 #logo{
@@ -44,11 +44,11 @@ h1{
 }
 
 .jumbotron{
-  background-image: asset-url('banner.jpg');
+  background-image: asset-url('banner1.jpg') ;  
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
+  background-size: cover; 
+  height: 600px; 
 }
 
  
